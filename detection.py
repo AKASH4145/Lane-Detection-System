@@ -68,7 +68,20 @@ def lane_detection(frame):
     if len(right_fit) > 0:
      right_lane = np.mean(right_fit, axis=0)
      right_line = make_coordinates(frame, right_lane)
-     cv2.line(frame,(right_line[0],right_line[1]),(right_line[2],right_line[3]),(0,255,0),5)   
+     cv2.line(frame,(right_line[0],right_line[1]),(right_line[2],right_line[3]),(0,255,0),5)  
+
+    if len(left_fit) > 0 and len(right_fit) > 0:
+
+     points = np.array([
+        [left_line[0], left_line[1]],
+        [left_line[2], left_line[3]],
+        [right_line[2], right_line[3]],
+        [right_line[0], right_line[1]]
+    ])
+
+     lane_overlay = np.zeros_like(frame)
+     cv2.fillPoly(lane_overlay, [points], (0,255,0))
+     frame = cv2.addWeighted(frame, 1, lane_overlay, 0.3, 0)
 
     cv2.namedWindow("Region of interest",cv2.WINDOW_NORMAL)
     cv2.namedWindow("Detected lane",cv2.WINDOW_NORMAL)   
