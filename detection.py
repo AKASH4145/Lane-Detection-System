@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 
 def region_of_interest(edges):
     height, width = edges.shape
@@ -95,7 +94,7 @@ def lane_detection(frame):
 
 
 if __name__=='__main__':
-    cap=cv2.VideoCapture(r"C:\Users\akash\Desktop\OpenCV Projects\Lane Detection\13681532-uhd_1440_2560_60fps.mp4")
+    cap=cv2.VideoCapture(r"C:\Users\akash\Desktop\OpenCV Projects\Lane Detection\Sample Videos\dashcam.mp4")
     while True:
      ret , frame=cap.read()
      if ret:
@@ -103,6 +102,4 @@ if __name__=='__main__':
         if cv2.waitKey(1)==13:
             break
     cap.release()
-    #frame=cv2.imread(r'C:\Users\akash\Desktop\OpenCV Projects\Lane Detection\Road_in_Norway.jpg')
-    #lane_detection(frame)
     cv2.destroyAllWindows    
