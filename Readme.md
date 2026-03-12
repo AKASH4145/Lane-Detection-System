@@ -113,8 +113,6 @@ LANE DETECTION/
  ![Detected Lane](Demo%20Screenshots/Detected%20Lane.png)
  ![Edge Detection](Demo%20Screenshots/Edge%20Detection.png)
  ![Region of interest (ROI)](Demo%20Screenshots/ROI.png)
-
- 
  🎥 Demo Video:  https://drive.google.com/file/d/1O2Kr_UTPYjGhOym_6YZh43Ou8NtxsDsc/view?usp=sharing
 
 ---
