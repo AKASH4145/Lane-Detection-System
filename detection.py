@@ -94,7 +94,7 @@ def lane_detection(frame):
 
 
 if __name__=='__main__':
-    cap=cv2.VideoCapture(r"C:\Users\akash\Desktop\OpenCV Projects\Lane Detection\Sample Videos\dashcam.mp4")
+    cap=cv2.VideoCapture(r"C:\Users\akash\OneDrive\Desktop\OpenCV Projects\Lane Detection\Sample Videos\dashcam.mp4")
     while True:
      ret , frame=cap.read()
      if ret:
@@ -102,4 +102,4 @@ if __name__=='__main__':
         if cv2.waitKey(1)==13:
             break
     cap.release()
-    cv2.destroyAllWindows    
+    cv2.destroyAllWindows()
